@@ -56,8 +56,13 @@ for (let i = 0 ; i < teamList.length ; i++){
     console.log('Nome:' + teamList[i].name);
     console.log('Ruolo:' + teamList[i].role);
     console.log('Foto:' + teamList[i].img);
-
-    singleName = "<h1>" + teamList[i].name + "</h1> <h2>" + teamList[i].role + "</h2> <img src='./img/"+ teamList[i].img +"'>";
-
+    const img = document.createElement ("img");
+    
+    
+    
+    singleName = "<h1>" + teamList[i].name + "</h1> <h2>" + teamList[i].role + "</h2>";
+    
+    img.src = "img/" + teamList[i].img;
     divMembElement.innerHTML += singleName;
+    divMembElement.append (img);
 }
