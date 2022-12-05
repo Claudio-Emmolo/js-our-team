@@ -7,10 +7,6 @@
 
 const divMembElement = document.querySelector('div.team-member');
 
-const h1Element = document.createElement ('h1');
-const h2Element = document.createElement ('h2');
-const pElement = document.createElement ('p');
-
 let singleMember;
 
 
@@ -55,16 +51,7 @@ for (let i = 0 ; i < teamList.length ; i++){
     console.log('Ruolo:' + teamList[i].role);
     console.log('Foto:' + teamList[i].img);
 
-    // h1Element.innerText = teamList[i].name;
-    // h2Element.innerText = teamList[i].role;
-    // pElement.innerText = teamList[i].img;
+    singleName = "<h1>" + teamList[i].name + "</h1> <h2>" + teamList[i].role + "</h2> <p>" + teamList[i].img + "</p>";
 
-    singleName = teamList[i].name + teamList[i].role + teamList[i].img + " ";
-
-    divMembElement.append(singleName);
-
-    
-    // divMembElement.append(h1Element);
-    // divMembElement.append(h2Element);
-    // divMembElement.append(pElement);
+    divMembElement.innerHTML += singleName;
 }
