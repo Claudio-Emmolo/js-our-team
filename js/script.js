@@ -5,6 +5,13 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+const divMembElement = document.querySelector('div.team-member');
+
+const h1Element = document.createElement ('h1');
+const h2Element = document.createElement ('h2');
+const pElement = document.createElement ('p');
+
+let singleMember;
 
 
 const teamList = [
@@ -45,4 +52,12 @@ for (let i = 0 ; i < teamList.length ; i++){
     console.log('Nome:' + teamList[i].name);
     console.log('Ruolo:' + teamList[i].role);
     console.log('Foto:' + teamList[i].img);
+
+    h1Element.innerText = teamList[i].name;
+    h2Element.innerText = teamList[i].role;
+    pElement.innerText = teamList[i].img;
+    
+    divMembElement.append(h1Element);
+    divMembElement.append(h2Element);
+    divMembElement.append(pElement);
 }
