@@ -48,16 +48,23 @@ const teamList = [
     },
 ];
 
+let singleName;
+
 for (let i = 0 ; i < teamList.length ; i++){
     console.log('Nome:' + teamList[i].name);
     console.log('Ruolo:' + teamList[i].role);
     console.log('Foto:' + teamList[i].img);
 
-    h1Element.innerText = teamList[i].name;
-    h2Element.innerText = teamList[i].role;
-    pElement.innerText = teamList[i].img;
+    // h1Element.innerText = teamList[i].name;
+    // h2Element.innerText = teamList[i].role;
+    // pElement.innerText = teamList[i].img;
+
+    singleName = teamList[i].name + teamList[i].role + teamList[i].img + " ";
+
+    divMembElement.append(singleName);
+
     
-    divMembElement.append(h1Element);
-    divMembElement.append(h2Element);
-    divMembElement.append(pElement);
+    // divMembElement.append(h1Element);
+    // divMembElement.append(h2Element);
+    // divMembElement.append(pElement);
 }
